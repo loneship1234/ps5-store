@@ -1,13 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+ 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  user-select: none;
+}
+a{
+  font-family: OpenSansSemiBold,-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+}
+@font-face {
+  font-family: OpenSansSemiBold;
+  src: url(../font/Open_Sans/OpenSans-SemiBold.ttf);
+}
+@font-face {
+  font-family: OpenSansBold;
+  src: url(../font/Open_Sans/OpenSans-Bold.ttf);
+}
+@font-face {
+  font-family: OpenSans;
+  src: url(../font/Open_Sans/OpenSans-Regular.ttf);
+}
+.font-regular{
+  font-family: OpenSans !important;
+}
+.font-Bold{
+  font-family: OpenSansBold !important;
+}
+.font-semiBold{
+  font-family: OpenSansSemiBold !important;
+}
+a::after{
+  content: "";
+  display: block;
+  padding-top: -2px;
+  border-bottom: 2px solid #171717;
+  width: 0;
+  transition: all 0.5s;
+}
+a:nth-last-of-type(1):hover:after {
+  width: 30px;
+}
+a:nth-last-of-type(2):hover:after {
+  width: 47px;
+}
+a:nth-last-of-type(3):hover:after {
+  width: 54px;
+}
+a:nth-last-of-type(4):hover:after {
+  width: 37px;
+}
+.dots{
+  height: 10px;
+  width: 10px;
+  background-color: rgb(142, 138, 138);
+  border-radius: 50%;
+}
+.grid-1{
+  /* display: grid; */
+  grid-template-rows:  23px 23px 23px 23px 23px 23px 23px 23px 23px 23px;
+  grid-template-columns: 30px 30px 30px 30px; 
+  column-gap: 3px;
+  row-gap: 3px;
+}
+.mr{
+  margin-right: -11em !important;
+}
+.position{
+  position: absolute;
+  top: 345px;
+  left: 20px;
+}
+.w-custom{
+  width: 29em;
+}
+.text-custom{
+  font-size: 27px;
+}
+.rounded-custom{
+  border-radius: 10px;
+}
+.shadow{
+  box-shadow: 0px 0px 8px #434242;
+  transition: all 0.6s;
+}
+.shadow:hover{
+  box-shadow: 0px 0px 15px #434242;
+}
+.bg-black-gradient{
+  background: rgb(62,62,62);
+background: linear-gradient(310deg, rgb(53, 53, 53) 0%, rgb(0, 0, 0) 100%);
+}
+.spaceing{
+  word-spacing: 9px;
 }
